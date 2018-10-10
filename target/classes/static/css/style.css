@@ -1,0 +1,74 @@
+
+.manito
+{
+    cursor:pointer !important;
+}
+
+.menuActivo
+{
+
+    text-decoration: none;
+    padding: 0px 10px;
+    color: white !important;
+    font-size: 13px;
+    border: 1px solid rgba(0,0,0,0);
+    display: block;
+    letter-spacing: 1px;
+    line-height: 2.5;
+    border-radius: 4px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    background-color: #1061a3;
+}
+
+#slidecontainer {
+    width: 80%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 13px;
+    height: 0px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+.centrado{
+    text-align: center;
+}
+
+.centrar {
+    #background-color: #fafafa;
+#    margin: 1rem;
+    padding: 1rem;
+ #   border: 2px solid #ccc;
+    /* IMPORTANTE */
+    text-align: center;
+}
+
+
+
+.center-block{
+    float: none;
+}

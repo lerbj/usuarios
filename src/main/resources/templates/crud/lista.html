@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+    <title>Lista::Crud</title>
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+
+<header id="header" class="headroom navbar-expand-lg">
+    <div class="navbar  " style="background-color: #103658;" role="navigation">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <a class="" href=""> <img src="" style=""></img></a>
+            </div>
+            <div class="navbar-header pull-right">
+                <ul class="nav navbar-nav" >
+                    <li><a href="">Usuarios</a></li>
+                    <li><a href="">Clientes</a></li>
+                    <li><a href="">Perfil</a></li>
+                    <li><a href="">Salir</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<a class="btn btn-info center-block btn-sm col-xs-1" href="/crud/nuevo">Nuevo Usuario</a>
+
+<div  class="">
+<div id=""></div>
+<div class="col-md-8 center-block table-responsive">
+
+    <div id="main-content" class="" >
+    <div class="panel-heading"><h3>Lista de usuarios</h3></div>
+    <table class="centrar table table-striped table-bordered table-condensed info ">
+        <thead class="text-white bg-dark text-center centrado" style="background-color: #103658; color: white;" >
+        <tr  class="centrado">
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Contrasena</th>
+            <th>Correo electronico</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </tr>
+        </thead>
+        <tbody class="table table-striped">
+        <tr  data-th-each="usuario : ${usuarios}">
+            <td data-th-text="${usuario.id}"></td>
+            <td data-th-text="${usuario.nombre}"></td>
+            <td data-th-text="${usuario.password}"></td>
+            <td data-th-text="${usuario.email}"></td>
+            <td><a th:href="@{'/crud/editar/{id}' (id=${usuario.id})}">
+                <span class="fa-stack">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </span>
+            </a>
+            </td>
+            <td>
+                <a th:href="@{'/crud/borrar/{id}' (id=${usuario.id})}">
+                    <span class="fa-stack">
+                    <i class="glyphicon glyphicon-trash"></i>
+                    </span>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+</div>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>
